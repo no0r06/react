@@ -1,73 +1,97 @@
-# React + TypeScript + Vite
+# 🍰 Sugar Bloom Bakery Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 📌 Project Overview
 
-Currently, two official plugins are available:
+This project is a simple bakery website built using **React with TypeScript**.  
+It was developed as a software engineering assignment to demonstrate the use of modern frontend tools, reusable components, and routing.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+The website simulates a bakery brand called **Sugar Bloom Bakery** with a pink-themed UI.
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🚀 Technologies Used
 
-## Expanding the ESLint configuration
+- React (TypeScript)
+- Vite
+- Bootstrap 5
+- React-Bootstrap
+- Material UI (MUI)
+- React Router DOM
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 🧩 Project Features
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+### 🧭 Navigation
+- Responsive **Bootstrap Navbar**
+- Contains links to different pages:
+  - Home
+  - Menu
+  - Products
+  - Contact
+- Includes a styled "Order Now" button
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+---
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### 📂 Sidebar
+- Built using **Material UI Drawer**
+- Opens from a hamburger menu button
+- Contains bakery category navigation:
+  - Home
+  - Menu
+  - Products
+  - Contact
+- Closes automatically when a link is clicked
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+---
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+### 🔀 Routing System
+- Implemented using **React Router DOM**
+- Enables navigation between pages without reloading the browser
+- Each route renders a different component
+
+---
+
+### 🧱 Component Structure
+The project uses a reusable component architecture:
+src/
+┣ components/
+┃ ┣ Navbar.tsx
+┃ ┗ SlideBar.tsx
+┣ pages/
+┃ ┣ Home.tsx
+┃ ┣ Menu.tsx
+┃ ┣ Products.tsx
+┃ ┗ Contact.tsx
+
+
+---
+
+## 🎨 UI Design
+
+- Pink-themed bakery aesthetic
+- Clean layout using Bootstrap + Material UI
+- Combination of two UI frameworks for learning purposes
+
+---
+
+## ▶️ How to Run the Project
+
+ 1. Install dependencies
+```bash
+npm install
+
+2. Run development server
+npm run dev
+
+3. Open in browser
+http://localhost:5173
+
+🧠 What I Learned
+How to combine Bootstrap and Material UI in one project
+How to build reusable components in React
+How to implement routing using React Router DOM
+How to structure a frontend project properly
+How to manage state for UI components (sidebar open/close)
+
+gpt chat link : https://chatgpt.com/share/69ee4c5d-826c-832f-b24b-da33499d23cf
