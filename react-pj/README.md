@@ -1,97 +1,42 @@
-# 🍰 Sugar Bloom Bakery Website
+# 🍰 Bakery Web Project
 
-## 📌 Project Overview
-
-This project is a simple bakery website built using **React with TypeScript**.  
-It was developed as a software engineering assignment to demonstrate the use of modern frontend tools, reusable components, and routing.
-
-The website simulates a bakery brand called **Sugar Bloom Bakery** with a pink-themed UI.
+## 📌 Overview
+This is a React + TypeScript bakery website built as a software engineering assignment.  
+It includes routing, reusable components, and a simple pink-themed UI.
 
 ---
 
-## 🚀 Technologies Used
+## 🔄 What we changed
 
-- React (TypeScript)
-- Vite
-- Bootstrap 5
-- React-Bootstrap
-- Material UI (MUI)
-- React Router DOM
+- Originally used **Bootstrap and SCSS** for styling
+- Replaced login page styling with **Tailwind CSS**
+- Removed SCSS from Login component
+- Removed Bootstrap dependency for styling consistency
 
 ---
 
-## 🧩 Project Features
+## 🎨 Why Tailwind was used
 
-### 🧭 Navigation
-- Responsive **Bootstrap Navbar**
-- Contains links to different pages:
-  - Home
-  - Menu
-  - Products
-  - Contact
-- Includes a styled "Order Now" button
+Tailwind CSS was chosen because:
+- It uses utility classes directly in components
+- It speeds up development by reducing separate CSS files
+- It improves maintainability and keeps styling inside TSX files
+- It avoids unnecessary predefined styles like Bootstrap
 
 ---
 
-### 📂 Sidebar
-- Built using **Material UI Drawer**
-- Opens from a hamburger menu button
-- Contains bakery category navigation:
-  - Home
-  - Menu
-  - Products
-  - Contact
-- Closes automatically when a link is clicked
+## ⚙️ Why this setup method
+
+Tailwind was installed using the Vite + npm setup because:
+- It works properly with React + TypeScript
+- It is optimized for production builds
+- It removes unused CSS automatically
+- It is the standard setup for modern frontend projects
 
 ---
 
-### 🔀 Routing System
-- Implemented using **React Router DOM**
-- Enables navigation between pages without reloading the browser
-- Each route renders a different component
+## 🚀 Run project
 
----
-
-### 🧱 Component Structure
-The project uses a reusable component architecture:
-src/
-┣ components/
-┃ ┣ Navbar.tsx
-┃ ┗ SlideBar.tsx
-┣ pages/
-┃ ┣ Home.tsx
-┃ ┣ Menu.tsx
-┃ ┣ Products.tsx
-┃ ┗ Contact.tsx
-
-
----
-
-## 🎨 UI Design
-
-- Pink-themed bakery aesthetic
-- Clean layout using Bootstrap + Material UI
-- Combination of two UI frameworks for learning purposes
-
----
-
-## ▶️ How to Run the Project
-
- 1. Install dependencies
 ```bash
 npm install
-
-2. Run development server
 npm run dev
-
-3. Open in browser
-http://localhost:5173
-
-🧠 What I Learned
-How to combine Bootstrap and Material UI in one project
-How to build reusable components in React
-How to implement routing using React Router DOM
-How to structure a frontend project properly
-How to manage state for UI components (sidebar open/close)
-
-gpt chat link : https://chatgpt.com/share/69ee4c5d-826c-832f-b24b-da33499d23cf
