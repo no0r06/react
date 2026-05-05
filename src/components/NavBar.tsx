@@ -1,58 +1,38 @@
+import { Link } from "react-router-dom";
 
-import { Navbar, Nav, Container, Button } from 'react-bootstrap';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import { Link } from 'react-router-dom';
 function MyNavbar() {
   return (
-    <Navbar expand="lg" style={{ backgroundColor: '#f8c8dc', padding: '15px' }}>
-      <Container>
-        <Navbar.Brand
-          as={Link}
-          to="/"
-          style={{
-            fontWeight: 'bold',
-            fontSize: '28px',
-            color: '#8b4513'
-          }}
-        >
-          Bloom Bakery
-        </Navbar.Brand>
+    <nav className="bg-pink-300 shadow-md px-8 py-4 flex justify-between items-center">
 
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+      <h1 className="text-3xl font-bold text-amber-800">
+        Bloom Bakery
+      </h1>
 
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="ms-auto">
-            <Nav.Link as={Link} to="/" style={{ color: '#8b4513', fontWeight: '500' }}>
-              Home
-            </Nav.Link>
+      <div className="flex items-center gap-6 text-amber-800 font-medium">
 
-            <Nav.Link as={Link} to="/menu" style={{ color: '#8b4513', fontWeight: '500' }}>
-              Menu
-            </Nav.Link>
+        <Link to="/" className="hover:text-white transition">
+          Home
+        </Link>
 
-            <Nav.Link as={Link} to="/products" style={{ color: '#8b4513', fontWeight: '500' }}>
-              Products
-            </Nav.Link>
+        <Link to="/menu" className="hover:text-white transition">
+          Menu
+        </Link>
 
+        <Link to="/products" className="hover:text-white transition">
+          Products
+        </Link>
 
-            <Nav.Link as={Link} to="/contact" style={{ color: '#8b4513', fontWeight: '500' }}>
-              Contact Us
-            </Nav.Link>
+        <Link to="/contact" className="hover:text-white transition">
+          Contact Us
+        </Link>
 
-            <Button
-              style={{
-                marginLeft: '15px',
-                backgroundColor: '#d87093',
-                border: 'none'
-              }}
-            >
-              Order Now
-            </Button>
-          </Nav>
-        </Navbar.Collapse>
-      </Container>
-    </Navbar>
+        <button className="bg-pink-500 text-white px-4 py-2 rounded-lg hover:bg-pink-600 transition">
+          Order Now
+        </button>
+
+      </div>
+    </nav>
   );
 }
 
-export default MyNavbar; 
+export default MyNavbar;

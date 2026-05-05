@@ -1,53 +1,46 @@
-import { useState } from 'react';
-import { Drawer, List, ListItemButton, ListItemText, IconButton } from '@mui/material';
-import MenuIcon from '@mui/icons-material/Menu';
-import { Link } from 'react-router-dom';
+import { useState } from "react";
+import { Drawer, IconButton } from "@mui/material";
+import MenuIcon from "@mui/icons-material/Menu";
+import { Link } from "react-router-dom";
 
 function SlideBar() {
   const [open, setOpen] = useState(false);
 
   return (
     <>
-      {/* ALWAYS VISIBLE BUTTON */}
       <IconButton
         onClick={() => setOpen(true)}
-        style={{
-          position: 'fixed',
-          top: 20,
-          left: 20,
-          zIndex: 9999,
-          backgroundColor: '#f8c8dc'
-        }}
+        className="!fixed !top-5 !left-5 !z-[9999] !bg-pink-300 hover:!bg-pink-400"
       >
         <MenuIcon />
       </IconButton>
 
-      {/* DRAWER */}
       <Drawer open={open} onClose={() => setOpen(false)}>
-        <div style={{ width: 250, height: '100%', backgroundColor: '#f8c8dc', padding: 20 }}>
+        <div className="w-64 h-full bg-pink-200 p-6">
 
-          <h3 style={{ color: '#8b4513' }}>Sugar Bloom Bakery</h3>
+          <h2 className="text-2xl font-bold text-amber-800 mb-8">
+            Sugar Bloom Bakery
+          </h2>
 
-          <List>
+          <div className="flex flex-col gap-5 text-amber-800 font-medium text-lg">
 
-            <ListItemButton component={Link} to="/" onClick={() => setOpen(false)}>
-              <ListItemText primary="Home" />
-            </ListItemButton>
+            <Link to="/" onClick={() => setOpen(false)} className="hover:text-white transition">
+              Home
+            </Link>
 
-            <ListItemButton component={Link} to="/menu" onClick={() => setOpen(false)}>
-              <ListItemText primary="Menu" />
-            </ListItemButton>
+            <Link to="/menu" onClick={() => setOpen(false)} className="hover:text-white transition">
+              Menu
+            </Link>
 
-            <ListItemButton component={Link} to="/products" onClick={() => setOpen(false)}>
-              <ListItemText primary="Products" />
-            </ListItemButton>
+            <Link to="/products" onClick={() => setOpen(false)} className="hover:text-white transition">
+              Products
+            </Link>
 
-            <ListItemButton component={Link} to="/contact" onClick={() => setOpen(false)}>
-              <ListItemText primary="Contact" />
-            </ListItemButton>
+            <Link to="/contact" onClick={() => setOpen(false)} className="hover:text-white transition">
+              Contact
+            </Link>
 
-          </List>
-
+          </div>
         </div>
       </Drawer>
     </>
